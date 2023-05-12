@@ -1,0 +1,26 @@
+{
+  "name": "ipstream",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "node ./bin/www",
+    "dev": "nodemon app.js",
+    "dist": "cross-env NODE_ENV=production PORT=80 pm2 start ./bin/www"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "ffmpeg": "^0.0.4",
+    "fluent-ffmpeg": "^2.1.2",
+    "morgan": "^1.10.0",
+    "node-rtsp-stream": "^0.0.9",
+    "nodemon": "^2.0.22",
+    "pm2": "^5.3.0",
+    "socket.io": "^4.6.1",
+    "winston": "^3.8.2",
+    "winston-daily-rotate-file": "^4.7.1"
+  }
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsmpeg/0.1/jsmpg.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+
+    <title>test stream</title>
+</head>
+<body>
+    <div>
+        <h1>Stream canvas</h1>
+        <canvas id="streaming" width="360px"></canvas>
+    </div>
+    <div>
+        <h1>(test) Stream canvas</h1>
+        <canvas id="test_streaming" width="360px"></canvas>
+    </div>
+</body>
+<script>
+    // let client = new WebSocket('ws://localhost:9999')
+    // let canvas = document.getElementById('streaming')
+    // let player = new jsmpeg(clinet, {
+    //     canvas: canvas
+    // })
+</script>
+<script>
+    // const video = document.getElementById('video_main')
+    // const stream_url = 'http://127.0.0.1:3030/video';
+    // const video_m3u8 = 'output.m3u8'
+    // video.src = stream_url
+</script>
+<script src="jsmpeg.min.js"></script>
+<script src="thirdparty/jsmpeg.min.js"></script>
+<script type="text/javascript">
+    const video_canvas = document.getElementById('streaming')
+    player = new JSMpeg.Player('ws://localhost:9999', {
+        canvas: video_canvas
+        // canvas: document.getElementById('streaming')
+    })
+    const test_video_canvas = document.getElementById('test_streaming')
+    player = new JSMpeg.Player('ws://14.5.218.145:9999', {
+        canvas: test_video_canvas
+        // canvas: document.getElementById('streaming')
+    })
+</script>
+</html>
